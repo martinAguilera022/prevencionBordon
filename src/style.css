@@ -11,3 +11,22 @@ body {
 .swiper-pagination-bullet-active {
 	@apply bg-blue-500;
 }
+.contacto-diagonal {
+	position: relative;
+	clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+}
+.border-main {
+	border-color: #023a94ff;
+}
+.bg-main {
+	background-color: #022257ff;
+}
+.bg-secondary {
+	background-color: #111;
+}
+.bg-highlight {
+	background-color: #c0c0c0;
+}
+.text-main {
+	color: #0b1d3a;
+}
