@@ -64,7 +64,8 @@
       <a href="#Servicios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Servicios</a>
       <a href="#Eventos" class="block py-2  text-lg text-gray-300 hover:text-blue-500">Eventos</a>
       <a href="#Beneficios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Porque elegirnos</a>
-      <a href="#Equipo" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Equipo</a>
+      <a href="#Cotizar" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Cotización</a>
+
 
     </div>
   </nav>
@@ -78,7 +79,7 @@
       class="bg-black -skew-y-6 gap-y-6 flex flex-col pt-28 pb-20  px-6 bg-opacity-80 text-white  p-9   text-start">
       <div class="skew-y-6">
         <h1 class="text-4xl font-bold">Prevención y control profesional para tu evento.</h1>
-        <h2 class="text-gray-400 text-lg font-bold">
+        <h2 id="Quienes" class="text-gray-400 text-lg font-bold">
           Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu seguridad.
         </h2>
         <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
@@ -124,9 +125,8 @@
     </div>
   </section>
 
-  <section>
-    <div class="bg-white text-white p-10 max-w-4xl mx-auto transform -skew-y-6  "
-     >
+  <section id="Servicios">
+    <div class="bg-white text-white p-10 max-w-4xl mx-auto transform -skew-y-6  ">
       <div class="skew-y-6 pt-10">
         <h4 class="text-center text-3xl  font-bold mb-6 text-black">Nuestros servicios</h4>
         <div class="grid grid-cols-2  gap-4 rounded-3xl">
@@ -144,7 +144,7 @@
           </div>
           <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2 border-white"><img
               src="./src/img/Vaso.png" alt="">
-            <p class="text-center border-b-2 border-main">Eventos privados y publicos</p>
+            <p id="Eventos" class="text-center border-b-2 border-main">Eventos privados y publicos</p>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@
       <h5 class="text-center text-3xl  font-bold mb-6">Nuestros Eventos</h2>
 
         <!-- Carrusel Swiper -->
-        <div id="Eventos" class="swiper swiper swiper-eventos">
+        <div class="swiper swiper swiper-eventos">
           <div class="swiper-wrapper">
             <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
               <img src="./src/img/Casamiento2.png" alt="Evento 1" class="w-full h-72 sm:h-80 object-cover">
@@ -221,7 +221,7 @@
         </div>
         <div class="flex gap-4 border-2 border-black items-center bg-black p-2 py-5 rounded-3xl">
           <img src="./src/img/CorazonBlanco.png" alt="" class="w-21 h-20 border-2 rounded-full ">
-          <p class="font-bold  text-white">
+          <p id="Cotizar" class="font-bold  text-white">
             Respuesta inmediata
             Certificación en RCP y DEA para emergencias.
           </p>
@@ -241,7 +241,7 @@
   <!-- Formulario WhatsApp -->
   <section id="contacto" class="contacto-diagonal mt-[-25px] py-20 bg-main h-full max-w-lg mx-auto px-4">
     <div class="contenido-contacto">
-      <h2 class="text-3xl font-bold text-center text-white mb-8">Solicitá tu Presupuesto</h2>
+      <h2 class="text-3xl font-bold text-center text-white mb-8">Solicitá tu Cotización</h2>
       <div class="bg-white text-black p-6 rounded-2xl">
         <input id="nombre" type="text" placeholder="Tu nombre" class="w-full p-3 border rounded mb-4">
         <input id="evento" type="text" placeholder="Tipo de evento" class="w-full p-3 border rounded mb-4">
@@ -306,37 +306,60 @@
 
 
 
-  <footer class="bg-black/90 text-white ">
+  <footer class="bg-black/90 text-white">
     <div
-      class="max-w-4xl mx-auto py-10 px-6 flex flex-col sm:flex-row justify-between items-center gap-6 skew-y-0 rounded-lg">
+      class="max-w-6xl mx-auto py-10 px-6 flex flex-col sm:flex-row justify-between items-center gap-6 skew-y-0 rounded-lg">
+
       <!-- Logo + Nombre -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 mb-6 sm:mb-0">
         <img src="./src/img/IconoLobo.png" alt="Logo Prevencion Bordon" class="w-10 h-10" />
         <span class="font-bold text-lg">Prevención Bordon</span>
       </div>
 
-      <!-- Links -->
-      <nav class="flex gap-8 text-gray-400 hover:text-green-600 transition-colors">
-        <a href="#top" class="hover:text-green-600 font-semibold">Inicio</a>
-        <a href="#Servicios" class="hover:text-green-600 font-semibold">Servicios</a>
+      <!-- Links internos -->
+      <nav class="grid grid-cols-3  text-center gap-2 text-gray-400  transition-colors mb-6 sm:mb-0">
+        <a href="#top" class="hover:text-main text-sm  font-semibold">Inicio</a>
+        <a href="#Quienes" class="hover:text-main text-sm  font-semibold">¿Quiénes somos?</a>
+        <a href="#Servicios" class="hover:text-main text-sm font-semibold">Servicios</a>
+        <a href="#Eventos" class="hover:text-main text-sm font-semibold">Eventos</a>
+        <a href="#Beneficios" class="hover:text-main text-sm font-semibold">Por qué elegirnos</a>
+        <a href="#Cotizar" class="hover:text-main text-sm font-semibold">Cotización</a>
 
       </nav>
 
-      <!-- Contacto WhatsApp -->
-      <a href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
-        target="_blank"
-        class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-3xl flex items-center gap-2 font-bold transition">
-        <img src="./src/img/whatsapp.png" alt="WhatsApp" class="w-6 h-6" />
-        Escríbenos
-      </a>
+      <!-- Redes sociales -->
+      <div class="flex gap-4">
+        <a href="https://www.facebook.com/prevencionbordon1?locale=es_LA" target="_blank" rel="noopener"
+          class="text-white hover:text-blue-600 transition">
+          <img src="./src/img/facebook.png" alt="Facebook Prevención Bordon" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/prevencionbordon1/" target="_blank" rel="noopener"
+          class="text-white hover:text-pink-500 transition">
+          <img src="./src/img/instagram.png" alt="Instagram Prevención Bordon" class="w-6 h-6">
+        </a>
+        <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
+          target="_blank" rel="noopener" class="text-white hover:text-pink-500 transition">
+          <img src="./src/img/whatsapp.png" alt="Instagram Prevención Bordon" class="w-6 h-6">
+        </a>
+
+
+        <!-- WhatsApp fijo también -->
+
+      </div>
     </div>
 
-    <div class="border-t border-gray-700 mt-4 py-4 text-center text-gray-500 text-sm  select-none space-y-1">
+    <!-- Derechos y desarrollador -->
+    <div class="border-t border-gray-700 mt-4 py-4 text-center text-gray-500 text-sm select-none space-y-1">
       <div>&copy; 2025 Prevención Bordon. Todos los derechos reservados.</div>
-      <div>Desarrollado por <a href="https://portfolio-martin-aguilera-gm1o.vercel.app/" target="_blank" rel="noopener"
-          class="text-grey-600 hover:underline">Martin Aguilera</a></div>
+      <div>Desarrollado por
+        <a href="https://portfolio-martin-aguilera-gm1o.vercel.app/" target="_blank" rel="noopener"
+          class="text-gray-400 hover:underline">
+          Martin Aguilera
+        </a>
+      </div>
     </div>
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
