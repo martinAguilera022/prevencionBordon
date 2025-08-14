@@ -30,3 +30,21 @@ body {
 .text-main {
 	color: #022257ff;
 }
+@keyframes text-focus-in {
+	0% {
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+.text-focus-in {
+	opacity: 0; /* Inicia invisible */
+}
+
+.text-focus-in.active {
+	animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
