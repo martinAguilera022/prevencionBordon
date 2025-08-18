@@ -11,15 +11,25 @@ body {
 .swiper-pagination-bullet-active {
 	@apply bg-blue-500;
 }
+/* Aplicar clip-path solo en pantallas mayores a lg */
+/* Clip-path por defecto (para móvil y tablets) */
 .contacto-diagonal {
 	position: relative;
 	clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
 }
+
+/* Para pantallas lg y mayores, eliminamos el clip-path */
+@media (min-width: 1024px) {
+	.contacto-diagonal {
+		clip-path: none;
+	}
+}
+
 .border-main {
-	border-color: #023a94ff;
+	border-color: #c0c0c0;
 }
 .bg-main {
-	background-color: #022257ff;
+	background-color: #080232;
 }
 .bg-secondary {
 	background-color: #111;
@@ -47,4 +57,14 @@ body {
 
 .text-focus-in.active {
 	animation: text-focus-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.swiper-pagination-bullet {
+	background: #ffffff6b; /* color del puntito */
+	opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+	background: #ffffffff; /* color azul Tailwind */
+	opacity: 1;
 }

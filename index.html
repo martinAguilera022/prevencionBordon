@@ -28,8 +28,9 @@
   <link rel="icon" type="image/png" href="./src/img/IconoLobo.png">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./src/style.css">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body id="top" class="relative min-h-screen  bg-gray-100">
@@ -40,64 +41,79 @@
 
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
-          <a href="#top"><img src="./src/img/IconoLobo.png" alt="" class="w-10 h-10 "></a>
-          <p class="text-white ml-2">PREVENCION BORDON</p>
+          <a href="#top">
+            <img src="./src/img/IconoLobo.png" alt="Logo" class="w-10 h-10">
+          </a>
+          <p class="text-white ml-2 font-semibold tracking-wide">PREVENCIÓN BORDON</p>
         </div>
 
-        <!-- Botón hamburguesa -->
+        <!-- Menú Desktop -->
+        <div class="hidden sm:flex space-x-8 items-center">
+          <a href="#top" class="text-gray-300 hover:text-blue-500 transition">Inicio</a>
+
+          <a href="#Servicios" class="text-gray-300 hover:text-blue-500 transition">Servicios</a>
+          <a href="#Eventos" class="text-gray-300 hover:text-blue-500 transition">Eventos</a>
+          <a href="#Beneficios" class="text-gray-300 hover:text-blue-500 transition">Por qué elegirnos</a>
+          <a href="#Quienes-Somos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">¿Quiénes somos?</a>
+          <a href="#Cotizar" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            Cotización
+          </a>
+        </div>
+
+        <!-- Botón hamburguesa (solo móvil) -->
         <div class="flex items-center sm:hidden">
-          <button id="menu-btn" class="text-white-600 hover:text-white-600 focus:outline-none">
-            <!-- Ícono hamburguesa -->
-            <svg class="w-6 h-6" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-7 h-7" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
 
-
       </div>
     </div>
 
-    <!-- Botón hamburguesa -->
-
     <!-- Menú móvil -->
-    <div id="mobile-menu" class="bg-black/80 hidden  absolute  left-0 w-full sm:hidden px-4 pb-4 ">
+    <div id="mobile-menu" class="bg-black/95 hidden absolute top-20 left-0 w-full sm:hidden px-4 pb-4">
       <a href="#top" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Inicio</a>
+      <a href="#Quienes-Somos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">¿Quiénes somos?</a>
       <a href="#Servicios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Servicios</a>
-      <a href="#Eventos" class="block py-2  text-lg text-gray-300 hover:text-blue-500">Eventos</a>
-      <a href="#Beneficios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Porque elegirnos</a>
-      <a href="#Cotizar" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Cotización</a>
-
-
+      <a href="#Eventos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Eventos</a>
+      <a href="#Beneficios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Por qué elegirnos</a>
+      <a href="#Cotizar" class="block py-2 text-lg text-blue-500 font-semibold">Cotización</a>
     </div>
   </nav>
+
 
   <div class="fixed inset-0 bg-cover max-h-4xl bg-center -z-10"
     style="background-image: url('./src/img/PrevencionDia.png')"></div>
 
   <!-- Sección con texto encima del fondo -->
-  <section class="flex flex-col justify-center  h-auto   ">
+  <section class="flex flex-col justify-center   h-auto   ">
     <div id="Inicio"
-      class="bg-black  -skew-y-6 gap-6 flex flex-col pt-28 pb-20  px-6 bg-opacity-80 text-white  p-9   text-start">
-      <div class="skew-y-6 gap-6 text-focus-in flex flex-col">
-        <h1 class="text-4xl  font-bold">Prevención y control profesional para tu evento.</h1>
-        <h2 id="Quienes" class="text-gray-400 text-lg font-bold">
+      class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 gap-6 flex flex-col lg:h-auto pt-28 lg:py-40 pb-20 lg:px-60  px-6 bg-opacity-80 text-white text-start">
+      <div class="skew-y-6 lg:skew-y-0 p-6 gap-6 lg:h-97 lg:grid grid-cols-2 grid-rows-3 text-focus-in flex flex-col">
+        <h1 class="text-4xl row-start-1 row-end-2  lg:text-5xl font-bold">Prevención y control profesional para tu
+          evento.</h1>
+        <h2 id="Quienes" class="text-gray-400 row-start-2 row-end-3 text-lg font-bold">
           Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu seguridad.
         </h2>
-        <a href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
-          class="bg-green-600 hover:bg-green-700 text-white text-md px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
+        <a id="Quienes-Somos"
+          href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
+          class="bg-green-600 hover:bg-green-700 text-white lg:h-min text-md row-start-3 row-end-4 px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
           Prepará tu evento seguro
           <img src="./src/img/whatsapp.png" alt="Whatsapp" class="w-7 h-7 rounded-full" />
         </a>
-
+        <img src="./src/img/IconoLobo.png" alt="Logo Prevencion Bordon"
+          class="hidden lg:block row-span-3 w-full lg:h-[80%] object-contain">
       </div>
 
     </div>
+
   </section>
 
   <!-- Segunda sección con contenido -->
-  <section class="bg-main text-white p-10 max-w-4xl mx-auto transform -skew-y-6">
-    <div class="text-focus-in skew-y-6 pt-10">
+  <section class="bg-main text-white p-10 lg:px-60 lg:py-20 mx-auto w-full transform  -skew-y-6 lg:skew-y-0 ">
+    <div class="text-focus-in skew-y-6 lg:skew-y-0 ">
       <h2 class="border-b-2 border-main text-3xl font-bold mb-4">¿Quiénes somos?</h2>
 
       <!-- Texto breve -->
@@ -128,11 +144,11 @@
     </div>
   </section>
 
-  <section id="Servicios">
-    <div class=" bg-white text-white p-10 max-w-4xl mx-auto transform -skew-y-6  ">
-      <div class="skew-y-6 text-focus-in pt-10">
+  <section id="Servicios" class="">
+    <div class=" bg-white text-white w-full p-10 lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0 ">
+      <div class="skew-y-6 lg:skew-y-0 text-focus-in pt-10">
         <h4 class="text-center text-3xl  font-bold mb-6 text-black">Nuestros servicios</h4>
-        <div class="grid grid-cols-2  gap-4 rounded-3xl">
+        <div class="grid grid-cols-2 lg:grid-cols-4  gap-4 rounded-3xl">
           <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2  border-white"><img
               src="./src/img/Torta.png" alt="">
             <p class="text-center border-b-2 border-main">Fiestas de xv, Cumpleaños</p>
@@ -151,85 +167,111 @@
           </div>
         </div>
       </div>
+
   </section>
-  <section class="bg-black text-white p-5 max-w-4xl mx-auto transform -skew-y-6 py-10 ">
-    <div class="skew-y-6 text-focus-in py-10">
-      <h5 class="text-center text-3xl  font-bold mb-6">Nuestros Eventos</h2>
+  <section class="bg-black text-white p-5 w-full mx-auto lg:px-60 transform -skew-y-6 lg:skew-y-0 py-10">
+    <div class="skew-y-6 lg:skew-y-0 text-focus-in py-10">
+      <h5 class="text-center text-3xl font-bold mb-6">Nuestros Eventos</h5>
 
-        <!-- Carrusel Swiper -->
-        <div class="swiper swiper swiper-eventos">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/Casamiento2.png" alt="Evento 1" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-            <!-- Foto 1 -->
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/EgresoVetical.jpg" alt="Evento 1" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-            <!-- Foto 2 -->
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/FiestaPapel.jpg" alt="Evento 2" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-            <!-- Foto 3 -->
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/LucesCelu.jpg" alt="Evento 3" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-            <!-- Foto 4 -->
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/Fiesta1.jpeg" alt="Evento 4" class="w-full h-72 sm:h-80 object-cover">
-            </div>
+      <!-- Carrusel Swiper -->
+      <div class="swiper swiper-eventos">
+        <div class="swiper-wrapper">
 
-
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/Sparta.jpeg" alt="Evento 4" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/FiestaDia.jpeg" alt="Evento 4" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-            <div class="swiper-slide rounded-xl overflow-hidden shadow-lg">
-              <img src="./src/img/ENTRADASPARTA.png" alt="Evento 4" class="w-full h-72 sm:h-80 object-cover">
-            </div>
-
+          <!-- Foto 1 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/Casamiento2.png" alt="Casamiento" class="w-full h-72 sm:h-80 object-cover">
 
           </div>
 
-          <!-- Paginación -->
-          <div id="Beneficios" class="swiper-pagination mt-4"></div>
+          <!-- Foto 2 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/EgresoVetical.jpg" alt="Egreso" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 3 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/FiestaPapel.jpg" alt="Fiesta Papel" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 4 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/LucesCelu.jpg" alt="Recital" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 5 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/Fiesta1.jpeg" alt="Fiesta" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 6 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/Sparta.jpeg" alt="Sparta" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 7 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/FiestaDia.jpeg" alt="Fiesta Día" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
+          <!-- Foto 8 -->
+          <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
+            <img src="./src/img/ENTRADASPARTA.png" alt="Entradas" class="w-full h-72 sm:h-80 object-cover">
+
+          </div>
+
         </div>
+
+        <!-- Paginación -->
+
+      </div>
+      <div id="Beneficios" class="swiper-pagination mt-4"></div>
     </div>
   </section>
+
+
   <section>
-    <div class="bg-white text-white p-10 max-w-4xl  mx-auto transform -skew-y-6 ">
-      <div class="skew-y-6 pt-10 text-black gap-y-6 flex flex-col">
-        <h5 class="text-center text-3xl text-focus-in font-bold mb-6">Por que elegirnos</h5>
-        <div class="flex gap-4 border-2 text-focus-in border-black items-center  p-2 py-5 rounded-3xl">
-          <img src="./src/img/listonNegro.png" alt="" class="w-20 h-20 text-black border-2 rounded-full border-black">
-          <p class="font-bold ">Nuestro equipo cuenta con habilitaciones y capacitación continua</p>
+    <div class="bg-white text-white p-10 w-full lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0">
+      <div class="skew-y-6 lg:skew-y-0 pt-10 lg:pb-20 text-black gap-y-6 gap-8 flex flex-col lg:grid grid-cols-2">
+        <h5 class="text-center col-span-2 text-3xl text-focus-in font-bold mb-6">Por que elegirnos</h5>
+
+        <div class="flex gap-4 border-2 lg:flex-col text-focus-in  border-black items-center  p-2 py-5 rounded-3xl">
+          <img src="./src/img/listonNegro.png" alt="Liston"
+            class="w-20 h-20 lg:w-40 lg:h-40 text-black border-2 lg:w-40 lg:h-40 rounded-full border-black">
+          <p class="font-bold lg:text-center lg:text-lg ">Nuestro equipo cuenta con habilitaciones y capacitación
+            continua</p>
         </div>
-        <div class="flex gap-4 text-focus-in border-2 border-black items-center bg-black  p-2 py-5 rounded-3xl">
-          <img src="./src/img/Ley1.png" alt="" class="w-21 h-20 border-2 rounded-full ">
-          <p class="font-bold text-white">
+        <div
+          class="flex gap-4 text-focus-in lg:flex-col  border-2  border-black items-center bg-black  p-2 py-5 rounded-3xl">
+          <img src="./src/img/Ley1.png" alt="" class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full ">
+          <p class="font-bold text-white lg:text-center lg:text-lg">
             Cumplimiento legal
             Operamos conforme a la Ley 26.370 y normas de seguridad vigentes.
           </p>
         </div>
-        <div class="flex gap-4 text-focus-in border-2 border-black items-center bg-white p-2 py-5 rounded-3xl">
-          <img src="./src/img/MANOS.png" alt="" class="w-21 h-20 border-2 rounded-full border-black">
-          <p class="font-bold text-black">
+        <div
+          class="flex gap-4 text-focus-in row-start-3 row-end-4 col-start-2 col-end-3    lg:flex-col border-2 border-black items-center bg-white p-2 py-5 rounded-3xl">
+          <img src="./src/img/MANOS.png" alt="" class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full border-black">
+          <p class="font-bold text-black lg:text-center lg:text-lg">
             Adaptación a eventos
             Servicios personalizados para cada tipo y tamaño de evento.
 
           </p>
         </div>
-        <div class="flex gap-4 text-focus-in border-2 border-black items-center bg-black p-2 py-5 rounded-3xl">
-          <img src="./src/img/CorazonBlanco.png" alt="" class="w-21 h-20 border-2 rounded-full ">
-          <p id="Cotizar" class="font-bold  text-white">
+        <div
+          class="flex gap-4 text-focus-in border-2 lg:flex-col border-black items-center bg-black p-2 py-5 rounded-3xl">
+          <img src="./src/img/CorazonBlanco.png" alt="" class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full ">
+          <p id="Cotizar" class="font-bold  text-white lg:text-center lg:text-lg">
             Respuesta inmediata
             Certificación en RCP y DEA para emergencias.
           </p>
         </div>
-        <div></div>
+
       </div>
   </section>
 
@@ -242,8 +284,7 @@
     <span class="sr-only">Escribinos por WhatsApp</span>
   </a>
   <!-- Formulario WhatsApp -->
-  <section id="contacto"
-    class="contacto-diagonal mt-[-25px] py-20 bg-main h-full shadow-[0_8px_25px_rgba(0,0,0,0.25)] max-w-lg mx-auto px-4">
+  <section id="contacto" class="contacto-diagonal mt-[-25px] lg:px-60 min-w-full py-20 bg-main h-full   w-full  px-4">
 
     <div class="text-focus-in contenido-contacto">
       <h2 class="text-3xl font-bold text-center text-white mb-8">Solicitá tu Cotización</h2>
@@ -258,48 +299,48 @@
       </div>
     </div>
   </section>
-  <section class="relative h-[auto] w-full ">
-    <div class="swiper swiper-servicios max-w-5xl mx-auto">
+  <section class="relative w-full ">
+    <div class="swiper swiper-servicios lg:w-full mx-auto">
       <div class="swiper-wrapper ">
         <!-- Slide 1 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/pREVENCIONpPUERTA.png" alt="Evento 1" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/pREVENCIONpPUERTA.png" alt="Evento 1" class="w-full h-[13rem] object-cover ">
           <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
         </div>
 
         <!-- Slide 2 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Noche.png" alt="Evento 2" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/Noche.png" alt="Evento 2" class="w-full h-[13rem] object-cover object-top">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 3 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
-          <img src="./src/img/PrubaGrupo.png" alt="Evento 3" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/PrubaGrupo.png" alt="Evento 3" class="w-full h-[13rem] object-cover ">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 4 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion.png" alt="Evento 4" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/PrevencioCorta.png" alt="Evento 4" class="w-full h-[13rem] object-cover object-top">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 5 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
-          <img src="./src/img/PrevencionChicas.png" alt="Evento 5" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/PrevencionChicas.png" alt="Evento 5" class="w-full h-[13rem] object-cover object-top">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 6 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion2.jpeg" alt="Evento 6" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/Prevencion2.jpeg" alt="Evento 6" class="w-full h-[13rem] object-cover ">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 7 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion3.jpeg" alt="Evento 7" class="w-full h-72 sm:h-80 object-cover">
+          <img src="./src/img/Prevencion3.jpeg" alt="Evento 7" class="w-full h-[13rem] object-cover object-top">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
       </div>
@@ -422,32 +463,29 @@
     const swiperEventos = new Swiper(".swiper-eventos", {
       slidesPerView: 1,
       spaceBetween: 20,
-      slideToClickedSlide: true, // Click activa el slide
+      slideToClickedSlide: true,
       grabCursor: true,
-      loop: true, // 🔄 Activa el bucle infinito
-      autoplay: {
-        delay: 2000, // Cambia cada 3 segundos
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      breakpoints: {
+        1024: { slidesPerView: 2, spaceBetween: 30 },
+        1280: { slidesPerView: 2, spaceBetween: 40 }
       },
-      navigation: {
-        nextEl: ".swiper-button-next-eventos",
-        prevEl: ".swiper-button-prev-eventos",
-      },
+      autoplay: { delay: 2000 },
+      navigation: { nextEl: ".swiper-button-next-eventos", prevEl: ".swiper-button-prev-eventos" },
     });
 
-    // Swiper NO clickeable
     const swiperServicios = new Swiper(".swiper-servicios", {
       slidesPerView: 1,
-      spaceBetween: 20,
-      slideToClickedSlide: false, // No responde al clic
-      allowTouchMove: false, // No se puede arrastrar
-      autoplay: {
-        delay: 3000, // Cambia cada 3 segundos
-        disableOnInteraction: false, // Sigue aunque el usuario toque
+
+      slideToClickedSlide: false,
+      allowTouchMove: false,
+      breakpoints: {
+        1024: { slidesPerView: 3 },
+        1280: { slidesPerView: 3 }
       },
-      navigation: {
-        nextEl: ".swiper-button-next-servicios",
-        prevEl: ".swiper-button-prev-servicios",
-      },
+      autoplay: { delay: 3000, disableOnInteraction: false },
+      navigation: { nextEl: ".swiper-button-next-servicios", prevEl: ".swiper-button-prev-servicios" },
     });
 
   </script>
