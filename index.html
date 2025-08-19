@@ -86,8 +86,15 @@
   </nav>
 
 
-  <div class="fixed inset-0 bg-cover max-h-4xl bg-center -z-10"
-    style="background-image: url('./src/img/PrevencionDia.png')"></div>
+  <picture>
+    <!-- Imagen para desktop -->
+    <source media="(min-width: 1024px)" srcset="./src/img/pREVENCIONpPUERTA.webp">
+
+
+
+    <!-- Imagen default para mobile -->
+    <img src="./src/img/PrevencionTraje.webp" alt="Prevención" class="fixed inset-0 object-cover w-full h-full -z-10">
+  </picture>
 
   <!-- Sección con texto encima del fondo -->
   <section class="flex flex-col justify-center   h-auto   ">
@@ -114,8 +121,8 @@
   </section>
 
   <!-- Segunda sección con contenido -->
-  <section class="bg-main text-white p-10 lg:px-60 lg:py-20 mx-auto w-full transform  -skew-y-6 lg:skew-y-0 ">
-    <div class="text-focus-in skew-y-6 lg:skew-y-0 ">
+  <section class="bg-main text-white p-10 py-20 lg:px-60 lg:py-20 mx-auto w-full transform  -skew-y-6 lg:skew-y-0 ">
+    <div class="text-focus-in skew-y-6 lg:skew-y-0  ">
       <h2 class="border-b-2 border-main text-3xl font-bold mb-4">¿Quiénes somos?</h2>
 
       <!-- Texto breve -->
@@ -195,39 +202,39 @@
 
           <!-- Foto 3 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/FiestaPapel.jpg" alt="Fiesta Papel" class="w-full h-72 sm:h-80 object-cover"
+            <img src="./src/img/FiestaPapel.webp" alt="Fiesta Papel" class="w-full h-72 sm:h-80 object-cover"
               loading="lazy">
 
           </div>
 
           <!-- Foto 4 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/LucesCelu.jpg" alt="Recital" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
+            <img src="./src/img/LucesCelu.webp" alt="Recital" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
 
           </div>
 
           <!-- Foto 5 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/Fiesta1.jpeg" alt="Fiesta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
+            <img src="./src/img/Fiesta1.webp" alt="Fiesta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
 
           </div>
 
           <!-- Foto 6 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/Sparta.jpeg" alt="Sparta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
+            <img src="./src/img/Sparta.webp" alt="Sparta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
 
           </div>
 
           <!-- Foto 7 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/FiestaDia.jpeg" alt="Fiesta Día" class="w-full h-72 sm:h-80 object-cover"
+            <img src="./src/img/FiestaDia.webp" alt="Fiesta Día" class="w-full h-72 sm:h-80 object-cover"
               loading="lazy">
 
           </div>
 
           <!-- Foto 8 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/ENTRADASPARTA.png" alt="Entradas" class="w-full h-72 sm:h-80 object-cover"
+            <img src="./src/img/ENTRADASPARTA.webp" alt="Entradas" class="w-full h-72 sm:h-80 object-cover"
               loading="lazy">
 
           </div>
@@ -314,46 +321,46 @@
       <div class="swiper-wrapper ">
         <!-- Slide 1 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/pREVENCIONpPUERTA.png" alt="Evento 1" class="w-full h-[13rem] object-cover "
+          <img src="./src/img/pREVENCIONpPUERTA.webp" alt="Evento 1" class="w-full h-[13rem] object-cover "
             loading="lazy">
           <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
         </div>
 
         <!-- Slide 2 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Noche.png" alt="Evento 2" class="w-full h-[13rem] object-cover object-top" loading="lazy">
+          <img src="./src/img/Noche.webp" alt="Evento 2" class="w-full h-[13rem] object-cover object-top" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 3 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
-          <img src="./src/img/PrubaGrupo.png" alt="Evento 3" class="w-full h-[13rem] object-cover " loading="lazy">
+          <img src="./src/img/PrubaGrupo.webp" alt="Evento 3" class="w-full h-[13rem] object-cover " loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 4 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/PrevencioCorta.png" alt="Evento 4" class="w-full h-[13rem] object-cover object-top"
+          <img src="./src/img/PrevencioCorta.webp" alt="Evento 4" class="w-full h-[13rem] object-cover object-top"
             loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 5 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
-          <img src="./src/img/PrevencionChicas.png" alt="Evento 5" class="w-full h-[13rem] object-cover object-top"
+          <img src="./src/img/PrevencionChicas.webp" alt="Evento 5" class="w-full h-[13rem] object-cover object-top"
             loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 6 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion2.jpeg" alt="Evento 6" class="w-full h-[13rem] object-cover " loading="lazy">
+          <img src="./src/img/Prevencion2.webp" alt="Evento 6" class="w-full h-[13rem] object-cover " loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 7 -->
         <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion3.jpeg" alt="Evento 7" class="w-full h-[13rem] object-cover object-top"
+          <img src="./src/img/Prevencion3.webp" alt="Evento 7" class="w-full h-[13rem] object-cover object-top"
             loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
