@@ -9,10 +9,26 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.1.0"
+    "@tailwindcss/postcss": "^4.1.12",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.12",
+    "vite": "^7.1.3"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11"
-  }
+    "@tailwindcss/vite": "^4.1.12"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinAguilera022/prevencionBordon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinAguilera022/prevencionBordon/issues"
+  },
+  "homepage": "https://github.com/martinAguilera022/prevencionBordon#readme",
+  "description": ""
 }
