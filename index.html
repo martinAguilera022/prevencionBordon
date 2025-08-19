@@ -44,8 +44,9 @@
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <a href="#top">
-            <img src="./src/img/IconoLobo.webp" alt="Logo" class="w-10 h-10">
+            <img src="./src/img/IconoLobo.webp" alt="Logo" width="40" height="40" class="w-10 h-10" loading="lazy">
           </a>
+
           <p class="text-white ml-2 font-semibold tracking-wide">PREVENCIÓN BORDON</p>
         </div>
 
@@ -85,40 +86,50 @@
     </div>
   </nav>
 
+  <link rel="preload" as="image" href="./src/img/pREVENCIONpPUERTA.webp">
 
   <picture>
-    <!-- Imagen para desktop -->
-    <source media="(min-width: 1024px)" srcset="./src/img/pREVENCIONpPUERTA.webp">
+    <!-- Imagen desktop -->
+    <source media="(min-width: 1024px)" srcset="./src/img/pREVENCIONpPUERTA.webp" type="image/webp">
 
-
-
-    <!-- Imagen default para mobile -->
-    <img src="./src/img/PrevencionTraje.webp" alt="Prevención" class="fixed inset-0 object-cover w-full h-full -z-10">
+    <!-- Imagen mobile (LCP) -->
+    <img src="./src/img/PrevencionTraje.webp" alt="Prevención Bordon"
+      class="fixed inset-0 object-cover w-full h-full -z-10" width="720" height="364" loading="eager">
   </picture>
-
   <!-- Sección con texto encima del fondo -->
-  <section class="flex flex-col justify-center   h-auto   ">
+  <section class="flex flex-col justify-center h-auto">
     <div id="Inicio"
-      class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 gap-6 flex flex-col lg:h-auto pt-28 lg:py-40 pb-20 lg:px-60  px-6 bg-opacity-80 text-white text-start">
+      class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 gap-6 flex flex-col lg:h-auto pt-28 lg:py-40 pb-20 lg:px-60 px-6 bg-opacity-80 text-white text-start">
+
       <div class="skew-y-6 lg:skew-y-0 p-6 gap-6 lg:h-97 lg:grid grid-cols-2 grid-rows-3 text-focus-in flex flex-col">
-        <h1 class="text-4xl row-start-1 row-end-2  lg:text-5xl font-bold">Prevención y control profesional para tu
-          evento.</h1>
+
+        <!-- Título -->
+        <h1 class="text-4xl row-start-1 row-end-2 lg:text-5xl font-bold">
+          Prevención y control profesional para tu evento.
+        </h1>
+
+        <!-- Subtítulo -->
         <h2 id="Quienes" class="text-gray-400 row-start-2 row-end-3 text-lg font-bold">
           Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu seguridad.
         </h2>
+
+        <!-- Botón WhatsApp -->
         <a id="Quienes-Somos"
           href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
           class="bg-green-600 hover:bg-green-700 text-white lg:h-min text-md row-start-3 row-end-4 px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
           Prepará tu evento seguro
-          <img src="./src/img/whatsapp.webp" alt="Whatsapp" class="w-7 h-7 rounded-full" />
+          <img src="./src/img/whatsapp.webp" alt="Whatsapp" width="28" height="28" class="w-7 h-7 rounded-full"
+            loading="lazy" />
         </a>
-        <img src="./src/img/IconoLobo.webp" alt="Logo Prevencion Bordon"
-          class="hidden lg:block row-span-3 w-full lg:h-[80%] object-contain">
+
+        <!-- Logo / Imagen decorativa -->
+        <img src="./src/img/IconoLobo.webp" alt="Logo Prevencion Bordon" width="160" height="160"
+          class="hidden lg:block row-span-3 w-full lg:h-[80%] object-contain" loading="lazy" />
+
       </div>
-
     </div>
-
   </section>
+
 
   <!-- Segunda sección con contenido -->
   <section class="bg-main text-white p-10 py-20 lg:px-60 lg:py-20 mx-auto w-full transform  -skew-y-6 lg:skew-y-0 ">
@@ -153,33 +164,49 @@
     </div>
   </section>
 
-  <section id="Servicios" class="">
-    <div class=" bg-white text-white w-full p-10 lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0 ">
+  <section id="Servicios">
+    <div class="bg-white text-white w-full p-10 lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0">
       <div class="skew-y-6 lg:skew-y-0 text-focus-in pt-10">
-        <h4 class="text-center text-3xl  font-bold mb-6 text-black">Nuestros servicios</h4>
-        <div class="grid grid-cols-2 lg:grid-cols-4  gap-4 rounded-3xl">
-          <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2  border-white"><img
-              src="./src/img/Torta.webp" alt="Torta">
-            <p class="text-center border-b-2 border-main">Fiestas de xv, Cumpleaños</p>
+
+        <!-- Título -->
+        <h4 class="text-center text-3xl font-bold mb-6 text-black">Nuestros servicios</h4>
+
+        <!-- Grid de servicios -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 rounded-3xl">
+
+          <!-- Servicio 1 -->
+          <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2 border-white">
+            <img src="./src/img/Torta.webp" alt="Torta" width="228" height="228" class="mx-auto" loading="lazy">
+            <p class="text-center border-b-2 border-main">Fiestas de XV, Cumpleaños</p>
           </div>
-          <div class="bg-black items-center justify-center text-white p-5 rounded-3xl border-2 border-white"><img
-              src="./src/img/Disco.webp" alt="Bola disco">
+
+          <!-- Servicio 2 -->
+          <div class="bg-black items-center justify-center text-white p-5 rounded-3xl border-2 border-white">
+            <img src="./src/img/Disco.webp" alt="Bola disco" width="228" height="228" class="mx-auto" loading="lazy">
             <p class="text-center border-b-2 border-main">Bares y Boliches</p>
           </div>
-          <div class="bg-black items-center justify-center text-white p-5 rounded-3xl border-2 border-white"><img
-              src="./src/img/Recital.webp" alt="Recital">
+
+          <!-- Servicio 3 -->
+          <div class="bg-black items-center justify-center text-white p-5 rounded-3xl border-2 border-white">
+            <img src="./src/img/Recital.webp" alt="Recital" width="228" height="228" class="mx-auto" loading="lazy">
             <p class="text-center border-b-2 border-main">Recitales y Conciertos</p>
           </div>
-          <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2 border-white"><img
-              src="./src/img/Vaso.webp" alt="Vaso">
-            <p id="Eventos" class="text-center border-b-2 border-main">Eventos privados y publicos</p>
+
+          <!-- Servicio 4 -->
+          <div class="bg-main items-center justify-center text-white p-5 rounded-3xl border-2 border-white">
+            <img src="./src/img/Vaso.webp" alt="Vaso" width="228" height="228" class="mx-auto" loading="lazy">
+            <p id="Eventos" class="text-center border-b-2 border-main">Eventos privados y públicos</p>
           </div>
+
         </div>
       </div>
-
+    </div>
   </section>
+
   <section class="bg-black text-white p-5 w-full mx-auto lg:px-60 transform -skew-y-6 lg:skew-y-0 py-10">
     <div class="skew-y-6 lg:skew-y-0 text-focus-in py-10">
+
+      <!-- Título -->
       <h5 class="text-center text-3xl font-bold mb-6">Nuestros Eventos</h5>
 
       <!-- Carrusel Swiper -->
@@ -188,109 +215,114 @@
 
           <!-- Foto 1 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/Casamiento2 (1).webp" alt="Casamiento" class="w-full h-72 sm:h-80 object-cover"
-              loading="lazy">
-
+            <img src="./src/img/Casamiento2.webp" alt="Casamiento" class="w-full h-72 sm:h-80 object-cover" width="379"
+              height="288" loading="lazy">
           </div>
 
           <!-- Foto 2 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/EgresoVetical.webp" alt="Egreso" class="w-full h-72 sm:h-80 object-cover"
-              loading="lazy">
-
+            <img src="./src/img/EgresoVetical.webp" alt="Egreso" class="w-full h-72 sm:h-80 object-cover" width="372"
+              height="490" loading="lazy">
           </div>
 
           <!-- Foto 3 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
             <img src="./src/img/FiestaPapel.webp" alt="Fiesta Papel" class="w-full h-72 sm:h-80 object-cover"
-              loading="lazy">
-
+              width="384" height="288" loading="lazy">
           </div>
 
           <!-- Foto 4 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/LucesCelu.webp" alt="Recital" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
-
+            <img src="./src/img/LucesCelu.webp" alt="Recital" class="w-full h-72 sm:h-80 object-cover" width="432"
+              height="288" loading="lazy">
           </div>
 
           <!-- Foto 5 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/Fiesta1.webp" alt="Fiesta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
-
+            <img src="./src/img/Fiesta1.webp" alt="Fiesta" class="w-full h-72 sm:h-80 object-cover" width="432"
+              height="288" loading="lazy">
           </div>
 
           <!-- Foto 6 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/Sparta.webp" alt="Sparta" class="w-full h-72 sm:h-80 object-cover" loading="lazy">
-
+            <img src="./src/img/Sparta.webp" alt="Sparta" class="w-full h-72 sm:h-80 object-cover" width="385"
+              height="288" loading="lazy">
           </div>
 
           <!-- Foto 7 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/FiestaDia.webp" alt="Fiesta Día" class="w-full h-72 sm:h-80 object-cover"
-              loading="lazy">
-
+            <img src="./src/img/FiestaDia.webp" alt="Fiesta Día" class="w-full h-72 sm:h-80 object-cover" width="412"
+              height="261" loading="lazy">
           </div>
 
           <!-- Foto 8 -->
           <div class="swiper-slide rounded-xl overflow-hidden shadow-lg relative">
-            <img src="./src/img/ENTRADASPARTA.webp" alt="Entradas" class="w-full h-72 sm:h-80 object-cover"
-              loading="lazy">
-
+            <img src="./src/img/ENTRADASPARTA.webp" alt="Entradas" class="w-full h-72 sm:h-80 object-cover" width="385"
+              height="288" loading="lazy">
           </div>
 
         </div>
 
         <!-- Paginación -->
-
+        <div id="Beneficios" class="swiper-pagination mt-4"></div>
       </div>
-      <div id="Beneficios" class="swiper-pagination mt-4"></div>
+
     </div>
   </section>
-
 
   <section>
     <div class="bg-white text-white p-10 w-full lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0">
       <div class="skew-y-6 lg:skew-y-0 pt-10 lg:pb-20 text-black gap-y-6 gap-8 flex flex-col lg:grid grid-cols-2">
-        <h5 class="text-center col-span-2 text-3xl text-focus-in font-bold mb-6">Por que elegirnos</h5>
 
-        <div class="flex gap-4 border-2 lg:flex-col text-focus-in  border-black items-center  p-2 py-5 rounded-3xl">
-          <img src="./src/img/listonNegro.webp" alt="Liston"
-            class="w-20 h-20 lg:w-40 lg:h-40 text-black border-2 lg:w-40 lg:h-40 rounded-full border-black"
-            loading="lazy">
-          <p class="font-bold lg:text-center lg:text-lg ">Nuestro equipo cuenta con habilitaciones y capacitación
-            continua</p>
+        <!-- Título -->
+        <h5 class="text-center col-span-2 text-3xl text-focus-in font-bold mb-6">Por qué elegirnos</h5>
+
+        <!-- Item 1 -->
+        <div class="flex gap-4 border-2 lg:flex-col text-focus-in border-black items-center p-2 py-5 rounded-3xl">
+          <img src="./src/img/listonNegro.webp" alt="Liston" width="160" height="160"
+            class="w-20 h-20 lg:w-40 lg:h-40 rounded-full border-2 border-black" loading="lazy">
+          <p class="font-bold lg:text-center lg:text-lg">
+            Nuestro equipo cuenta con habilitaciones y capacitación continua
+          </p>
         </div>
+
+        <!-- Item 2 -->
         <div
-          class="flex gap-4 text-focus-in lg:flex-col  border-2  border-black items-center bg-black  p-2 py-5 rounded-3xl">
-          <img src="./src/img/Ley1.webp" alt="" class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full " loading="lazy">
+          class="flex gap-4 text-focus-in lg:flex-col border-2 border-black items-center bg-black p-2 py-5 rounded-3xl">
+          <img src="./src/img/Ley1.webp" alt="Cumplimiento legal" width="160" height="160"
+            class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full" loading="lazy">
           <p class="font-bold text-white lg:text-center lg:text-lg">
-            Cumplimiento legal
+            Cumplimiento legal<br>
             Operamos conforme a la Ley 26.370 y normas de seguridad vigentes.
           </p>
         </div>
-        <div
-          class="flex gap-4 text-focus-in row-start-3 row-end-4 col-start-2 col-end-3    lg:flex-col border-2 border-black items-center bg-white p-2 py-5 rounded-3xl">
-          <img src="./src/img/MANOS.webp" loading="lazy" alt=""
-            class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full border-black">
-          <p class="font-bold text-black lg:text-center lg:text-lg">
-            Adaptación a eventos
-            Servicios personalizados para cada tipo y tamaño de evento.
 
+        <!-- Item 3 -->
+        <div
+          class="flex gap-4 text-focus-in row-start-3 row-end-4 col-start-2 col-end-3 lg:flex-col border-2 border-black items-center bg-white p-2 py-5 rounded-3xl">
+          <img src="./src/img/MANOS.webp" alt="Adaptación a eventos" width="160" height="160"
+            class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full border-black" loading="lazy">
+          <p class="font-bold text-black lg:text-center lg:text-lg">
+            Adaptación a eventos<br>
+            Servicios personalizados para cada tipo y tamaño de evento.
           </p>
         </div>
+
+        <!-- Item 4 -->
         <div
           class="flex gap-4 text-focus-in border-2 lg:flex-col border-black items-center bg-black p-2 py-5 rounded-3xl">
-          <img src="./src/img/CorazonBlanco.webp" loading="lazy" alt=""
-            class="w-21 h-20 lg:w-40 lg:h-40 border-2 rounded-full ">
-          <p id="Cotizar" class="font-bold  text-white lg:text-center lg:text-lg">
-            Respuesta inmediata
+          <img src="./src/img/CorazonBlanco.webp" alt="Respuesta inmediata" width="160" height="160"
+            class="w-20 h-20 lg:w-40 lg:h-40 border-2 rounded-full" loading="lazy">
+          <p id="Cotizar" class="font-bold text-white lg:text-center lg:text-lg">
+            Respuesta inmediata<br>
             Certificación en RCP y DEA para emergencias.
           </p>
         </div>
 
       </div>
+    </div>
   </section>
+
 
 
   <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
@@ -316,61 +348,67 @@
       </div>
     </div>
   </section>
-  <section class="relative w-full ">
+  <section class="relative w-full">
     <div class="swiper swiper-servicios lg:w-full mx-auto">
-      <div class="swiper-wrapper ">
+      <div class="swiper-wrapper">
+
         <!-- Slide 1 -->
-        <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/pREVENCIONpPUERTA.webp" alt="Evento 1" class="w-full h-[13rem] object-cover "
-            loading="lazy">
+        <div class="swiper-slide relative overflow-hidden shadow-lg">
+          <img src="./src/img/pREVENCIONpPUERTA.webp" alt="Evento 1" class="w-full h-[13rem] object-cover" width="412"
+            height="291" loading="lazy">
           <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
         </div>
 
         <!-- Slide 2 -->
-        <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Noche.webp" alt="Evento 2" class="w-full h-[13rem] object-cover object-top"
-            loading="lazy">
+        <div class="swiper-slide relative overflow-hidden shadow-lg">
+          <img src="./src/img/Noche.webp" alt="Evento 2" class="w-full h-[13rem] object-cover object-top" width="412"
+            height="253" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 3 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
-          <img src="./src/img/PrubaGrupo.webp" alt="Evento 3" class="w-full h-[13rem] object-cover " loading="lazy">
+          <img src="./src/img/PrubaGrupo.webp" alt="Evento 3" class="w-full h-[13rem] object-cover" width="412"
+            height="261" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 4 -->
-        <div class="swiper-slide relative overflow-hidden  shadow-lg">
+        <div class="swiper-slide relative overflow-hidden shadow-lg">
           <img src="./src/img/PrevencioCorta.webp" alt="Evento 4" class="w-full h-[13rem] object-cover object-top"
-            loading="lazy">
+            width="412" height="277" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 5 -->
         <div class="swiper-slide relative overflow-hidden shadow-lg">
           <img src="./src/img/PrevencionChicas.webp" alt="Evento 5" class="w-full h-[13rem] object-cover object-top"
-            loading="lazy">
+            width="412" height="285" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 6 -->
-        <div class="swiper-slide relative overflow-hidden  shadow-lg">
-          <img src="./src/img/Prevencion2.webp" alt="Evento 6" class="w-full h-[13rem] object-cover " loading="lazy">
+        <div class="swiper-slide relative overflow-hidden shadow-lg">
+          <img src="./src/img/Prevencion2.webp" alt="Evento 6" class="w-full h-[13rem] object-cover" width="412"
+            height="309" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
 
         <!-- Slide 7 -->
-        <div class="swiper-slide relative overflow-hidden  shadow-lg">
+        <div class="swiper-slide relative overflow-hidden shadow-lg">
           <img src="./src/img/Prevencion3.webp" alt="Evento 7" class="w-full h-[13rem] object-cover object-top"
-            loading="lazy">
+            width="412" height="291" loading="lazy">
           <div class="absolute inset-0 bg-blue-800 bg-opacity-30"></div>
         </div>
+
       </div>
 
       <!-- Paginación -->
+      <div class="swiper-pagination mt-4"></div>
 
     </div>
   </section>
+
 
 
 
