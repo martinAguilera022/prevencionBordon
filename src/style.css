@@ -4,6 +4,31 @@ body {
 	font-weight: 200;
 	font-style: normal;
 }
+/* Scroll general del body */
+body::-webkit-scrollbar {
+	width: 12px; /* ancho de la barra */
+}
+
+body::-webkit-scrollbar-track {
+	background: transparent; /* fondo del track */
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: rgba(30, 64, 175, 0.5); /* azul semitransparente */
+	border-radius: 6px;
+	border: 3px solid transparent; /* separa un poco del track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(30, 64, 175, 0.8); /* más intenso al hover */
+}
+
+/* Firefox */
+body {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(30, 64, 175, 0.5) transparent;
+}
+
 .swiper-pagination-bullet {
 	background-color: #c0c0c0; /* equivale a bg-gray-400 */
 	opacity: 0.6;
