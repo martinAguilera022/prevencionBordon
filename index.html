@@ -98,38 +98,40 @@
   </picture>
   <!-- Sección con texto encima del fondo -->
   <section class="flex flex-col justify-center h-auto">
-    <div id="Inicio"
-      class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 gap-6 flex flex-col lg:h-auto pt-28 lg:py-40 pb-20 lg:px-60 px-6 bg-opacity-80 text-white text-start">
+    <div id="Inicio" class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 bg-opacity-80 text-white text-start">
 
+      <!-- Contenedor principal -->
       <div
-        class="skew-y-6 lg:gap-8 lg:skew-y-0 p-6 gap-6 lg:p-2 lg:h-auto lg:grid grid-cols-2 grid-rows-3 text-focus-in flex flex-col">
+        class="skew-y-6 lg:skew-y-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 lg:py-40 lg:px-60 gap-6 pt-28 pb-20 px-6">
 
-        <!-- Título -->
-        <h1 class="text-4xl row-start-1 row-end-2 lg:text-5xl font-bold">
-          Prevención y control profesional para tu evento.
-        </h1>
+        <!-- Texto -->
+        <div class="flex flex-col gap-6">
+          <h1 class="text-4xl lg:text-5xl font-bold">
+            Prevención y control profesional para tu evento.
+          </h1>
+          <h2 id="Quienes" class="text-gray-400 text-lg font-bold">
+            Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu
+            seguridad.
+          </h2>
+          <a id="Quienes-Somos"
+            href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
+            class="bg-green-600 hover:bg-green-700 text-white text-md px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
+            Prepará tu evento seguro
+            <img src="./src/img/whatsapp.webp" alt="Whatsapp" width="28" height="28" class="w-7 h-7 rounded-full"
+              loading="lazy" />
+          </a>
+        </div>
 
-        <!-- Subtítulo -->
-        <h2 id="Quienes" class="text-gray-400 row-start-2 row-end-3 text-lg font-bold">
-          Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu seguridad.
-        </h2>
-
-        <!-- Botón WhatsApp -->
-        <a id="Quienes-Somos"
-          href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
-          class="bg-green-600 hover:bg-green-700 text-white lg:h-min text-md row-start-3 row-end-4 px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
-          Prepará tu evento seguro
-          <img src="./src/img/whatsapp.webp" alt="Whatsapp" width="28" height="28" class="w-7 h-7 rounded-full"
+        <!-- Imagen / Logo -->
+        <div class="hidden lg:flex ">
+          <img src="./src/img/IconoLobo.webp" alt="Logo Prevencion Bordon" class="w-full lg:h-[80%] object-contain"
             loading="lazy" />
-        </a>
-
-        <!-- Logo / Imagen decorativa -->
-        <img src="./src/img/IconoLobo.webp" alt="Logo Prevencion Bordon" width="160" height="160"
-          class="hidden lg:block row-span-3 w-full lg:h-[80%] object-contain " loading="lazy" />
+        </div>
 
       </div>
     </div>
   </section>
+
 
 
   <!-- Segunda sección con contenido -->
