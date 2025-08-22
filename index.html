@@ -39,6 +39,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body id="top" class="relative min-h-screen  bg-gray-100">
@@ -108,20 +109,20 @@
 
       <!-- Contenedor principal -->
       <div
-        class="skew-y-6 lg:skew-y-0 flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 lg:py-40 lg:px-60 gap-6 pt-28 pb-20 px-6">
+        class="skew-y-6 lg:skew-y-0 text-focus-in flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 lg:py-40 lg:px-60 gap-6 pt-28 pb-20 px-6 sm:px-1">
 
         <!-- Texto -->
         <div class="flex flex-col gap-6">
-          <h1 class="text-4xl lg:text-5xl font-bold">
-            Prevención y control profesional para tu evento.
+          <h1 class="text-3xl  md:text-4xl lg:text-5xl font-bold">
+            Seguridad y prevención profesional para tu evento.
           </h1>
           <h2 id="Quienes" class="text-gray-400 text-lg font-bold">
-            Control y prevención para todo tipo de eventos, con personal certificado y compromiso total con tu
+            Seguridady prevención para todo tipo de eventos, con personal certificado y compromiso total con tu
             seguridad.
           </h2>
           <a id="Quienes-Somos"
             href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
-            class="bg-green-600 hover:bg-green-700 text-white text-md px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
+            class="bg-green-600 text-sm lg:text-lg hover:bg-green-700 text-white text-md px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
             Prepará tu evento seguro
             <img src="./src/img/whatsapp.webp" alt="Whatsapp" width="28" height="28" class="w-7 h-7 rounded-full"
               loading="lazy" />
@@ -140,6 +141,7 @@
 
 
 
+
   <!-- Segunda sección con contenido -->
   <section class="bg-main text-white p-10 py-20 lg:px-60 lg:py-20 mx-auto w-full transform  -skew-y-6 lg:skew-y-0 ">
     <div class="text-focus-in skew-y-6 lg:skew-y-0  ">
@@ -147,14 +149,14 @@
 
       <!-- Texto breve -->
       <p id="texto-corto" class="uppercase text-md leading-tight mb-4">
-        En Prevención Bordon nos dedicamos a brindar <strong>seguridad integral para eventos</strong>, adaptándonos a
+        En Prevención Bordon nos dedicamos a brindar <strong>seguridad para eventos</strong>, adaptándonos a
         las necesidades de cada cliente.
       </p>
 
       <!-- Texto adicional oculto -->
       <div id="texto-largo" class="hidden transition-all duration-500">
         <ul class="list-disc  list-inside text-lg leading-snug mb-6 space-y-2">
-          <li>Control y prevención profesional con un <strong>equipo altamente capacitado</strong>.</li>
+          <li>Seguridad y prevención profesional con un <strong>equipo altamente capacitado</strong>.</li>
           <li>Certificación en RCP y uso de DEA para una <strong>respuesta inmediata ante emergencias</strong>.</li>
           <li>Personal habilitado según la <strong>ley 26.370</strong>, cumpliendo con todas las normativas vigentes.
           </li>
@@ -172,6 +174,8 @@
       </button>
     </div>
   </section>
+
+
 
   <section id="Servicios">
     <div class="bg-white text-white w-full p-10 lg:px-60 mx-auto transform -skew-y-6 lg:skew-y-0">
@@ -332,7 +336,49 @@
     </div>
   </section>
 
+  <section
+    class="bg-black text-white p-10 py-20 flex flex-col lg:flex-row lg:px-60 lg:py-20 mx-auto w-full transform -skew-y-6 lg:skew-y-0">
+    <div class="skew-y-6 lg:skew-y-0 text-focus-in">
+      <h2 class="text-3xl font-bold mb-6 text-center">Zonas que Cubrimos</h2>
 
+      <p class="text-center mb-6 text-white/80">Escribinos y consulta tu localidad.</p>
+
+      <!-- Contenedor del mapa -->
+      <div id="map" class="lg:w-100 w-auto h-96 rounded-xl shadow-lg"></div>
+    </div>
+    <div class=" skew-y-6 lg:skew-y-0 flex flex-col gap-6 justify-center items-center">
+
+      <!-- Card 1 -->
+      <div class="flex flex-row items-center justify-center p-6 text-center flex flex-col  ">
+
+
+        <div
+          class="w-30 h-30 border-4 flex flex-col  items-center justify-center border-white text-center text-white p-10 rounded-full">
+          <span id="experience" class="font-extrabold text-4xl  font-extrabold ">
+            +0
+          </span>
+          <p>Años</p>
+        </div>
+        <p class="text-xl lg:text-2xl  text-white  ">
+          Protegiendo eventos con profesionalismo y compromiso absoluto
+        </p>
+        </p>
+      </div>
+
+      <div class="flex text-focus-in flex-col border-2 border-black items-center p-5 rounded-3xl text-center">
+        <p class="text-xl lg:text-2xl  text-white gap-4 flex items-center justify-center flex-col">
+          <span id="events"
+            class="font-extrabold text-4xl  font-extrabold w-30 h-30 border-4 border-white text-center text-white flex items-center justify-center rounded-full">0</span>
+          Eventos realizados
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
 
   <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
     target="_blank" rel="noopener"
@@ -477,7 +523,9 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
+
     const elementos = document.querySelectorAll(".text-focus-in");
 
     const observer = new IntersectionObserver(
@@ -556,7 +604,96 @@
       autoplay: { delay: 3000, disableOnInteraction: false },
       navigation: { nextEl: ".swiper-button-next-servicios", prevEl: ".swiper-button-prev-servicios" },
     });
+    // Inicializamos el mapa
+    const map = L.map('map').setView([-34.2044120404261, -59.892346263222066], 9); // Centramos en Buenos Aires
 
+    // Capa de OpenStreetMap
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+
+    // Icono personalizado con el logo de la empresa
+    const logoIcon = L.icon({
+      html: `<div style="
+    background-color: #022257;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  ">
+    <img src="./src/img/IconoLobo.webp" style="width:30px; height:30px;">
+  </div>`,
+      iconUrl: './src/img/logo_correcto.webp', // ruta a tu logo
+      iconSize: [30, 50], // tamaño del logo [ancho, alto]
+      iconAnchor: [0, 30], // punto que apunta a la ubicación
+
+
+    });
+
+    // Localidades a marcar
+    const zonas = [
+      { nombre: "San Antonio de Areco", coords: [-34.2534488266816, -59.47240545103087] },
+      { nombre: "San Andrés de Giles", coords: [-34.443178546607214, -59.446775706976254] },
+      { nombre: "Arrecifes", coords: [-34.064087910730365, -60.099837331750415] },
+      { nombre: "Capitán Sarmiento", coords: [-34.173054836005335, -59.793674185018176] },
+      { nombre: "Luján", coords: [-34.576, -59.105] },
+      { nombre: "Mercedes", coords: [-34.63811411274513, -59.42804698231077] },
+      { nombre: "Pergamino", coords: [-33.88465939495402, -60.58448493479187] },
+    ];
+
+    // Dibujamos círculos y agregamos el marcador con logo
+    zonas.forEach(zona => {
+      // Círculo de cobertura
+
+
+      // Marcador con logo
+      L.marker(zona.coords, { icon: logoIcon })
+        .addTo(map)
+        .bindPopup(`<strong>${zona.nombre}</strong>`);
+    });
+    function countUp(element, to, duration = 2000) {
+      const start = 0;
+      const startTime = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const value = Math.floor(progress * (to - start) + start);
+        element.textContent = '+' + value;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Seleccionamos las cards con número
+    const numberCards = [
+      { el: document.getElementById("experience"), to: 20 },
+      { el: document.getElementById("events"), to: 100 },
+      { el: document.getElementById("clients"), to: 50 },
+    ];
+
+    // IntersectionObserver para animar solo cuando entren en pantalla
+    const observerNumbers = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const card = numberCards.find(c => c.el === entry.target);
+            if (card) {
+              countUp(card.el, card.to, 2000);
+              observer.unobserve(card.el); // solo una vez
+            }
+          }
+        });
+      },
+      { threshold: 0.5 } // se activa cuando 50% visible
+    );
+
+    // Observamos cada número
+    numberCards.forEach(card => observerNumbers.observe(card.el));
   </script>
   <script type="module" src="./src/main.js"></script>
 </body>
