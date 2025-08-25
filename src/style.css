@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "tailwindcss";
-body{
+body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 200;
 	font-style: normal;
@@ -14,7 +14,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
 	background: transparent; /* fondo del track */
 }
-
+.max-h-open {
+	max-height: 1000px; /* o lo que necesite tu contenido */
+}
 body::-webkit-scrollbar-thumb {
 	background-color: rgba(30, 64, 175, 0.5); /* azul semitransparente */
 	border-radius: 6px;
@@ -53,7 +55,18 @@ body {
 		clip-path: none;
 	}
 }
+/* Animación de expandir/colapsar */
+.expandible {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
 
+.expandible.show {
+	max-height: 500px; /* ajusta según lo largo del texto */
+	opacity: 1;
+}
 .border-main {
 	border-color: #022257ff;
 }

@@ -44,54 +44,102 @@
 
 <body id="top" class="relative min-h-screen  bg-gray-100">
   <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="bg-black shadow-md fixed w-full z-10 top-0 left-0">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20">
+      <div class="flex justify-between h-20 items-center">
 
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <a href="#top">
-            <img src="./src/img/IconoLobo.webp" alt="Logo" width="40" height="40" class="w-10 h-10" loading="lazy">
+            <img src="./src/img/IconoLobo.webp" alt="Logo" class="w-10 h-10" loading="lazy">
           </a>
-
           <p class="text-white ml-2 font-semibold tracking-wide">PREVENCIÓN BORDON</p>
         </div>
 
         <!-- Menú Desktop -->
-        <div class="hidden sm:flex space-x-8 items-center">
-          <a href="#top" class="text-gray-300 hover:text-blue-500 transition">Inicio</a>
+        <div class="flex items-center gap-4">
+          <!-- Redes sociales (solo sm+) -->
+          <div class="hidden sm:flex gap-4 items-center">
+            <a href="https://www.facebook.com/prevencionbordon1?locale=es_LA" target="_blank" rel="noopener"
+              class="text-white hover:text-blue-600 transition">
+              <img src="./src/img/Facebook.webp" alt="Facebook Prevención Bordon" class="w-6 h-6">
+            </a>
+            <a href="https://www.instagram.com/prevencionbordon1/" target="_blank" rel="noopener"
+              class="text-white hover:text-pink-500 transition">
+              <img src="./src/img/instagram.webp" alt="Instagram Prevención Bordon" class="w-6 h-6">
+            </a>
+            <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
+              target="_blank" rel="noopener" class="text-white hover:text-green-500 transition">
+              <img src="./src/img/whatsapp.webp" alt="WhatsApp Prevención Bordon" class="w-6 h-6">
+            </a>
+            <p class="text-white">|</p>
+          </div>
 
-          <a href="#Servicios" class="text-gray-300 hover:text-blue-500 transition">Servicios</a>
-          <a href="#Eventos" class="text-gray-300 hover:text-blue-500 transition">Eventos</a>
-          <a href="#Beneficios" class="text-gray-300 hover:text-blue-500 transition">Por qué elegirnos</a>
-          <a href="#Quienes-Somos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">¿Quiénes somos?</a>
-          <a href="#Cotizar" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-            Cotización
-          </a>
+          <div class="relative lg:flex hidden items-center group">
+            <!-- Menú expandible que empuja hacia la derecha -->
+            <div class="overflow-hidden w-0 group-hover:w-[50rem] transition-all duration-500">
+              <ul
+                class="flex flex-row gap-4 items-center bg-white text-black rounded-full px-4 py-2 whitespace-nowrap shadow-[inset_0_4px_6px_rgba(0,0,0,0.2)]">
+                <li><a href="#top" class="text-lg text-black-300 hover:text-blue-500">Inicio</a></li>
+                <li><a href="#Quienes-Somos" class="text-lg text-black-300 hover:text-blue-500">¿Quiénes somos?</a></li>
+                <li><a href="#Servicios" class="text-lg text-black-300 hover:text-blue-500">Servicios</a></li>
+                <li><a href="#Eventos" class="text-lg text-black-300 hover:text-blue-500">Eventos</a></li>
+                <li><a href="#Zonas" class="text-lg text-black-300 hover:text-blue-500">Ubicación</a></li>
+                <li><a href="#Beneficios" class="text-lg text-black-300 hover:text-blue-500">Por qué elegirnos</a></li>
+                <li><a href="#Cotizar" class="text-lg text-blue-500 font-semibold">Cotización</a></li>
+              </ul>
+            </div>
+
+            <!-- Botón hamburguesa -->
+            <button id="menu-btn2" class="text-white focus:outline-none z-10">
+              <svg class="w-7 h-7" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        <!-- Botón hamburguesa (solo móvil) -->
-        <div class="flex items-center sm:hidden">
-          <button id="menu-btn" class="text-white focus:outline-none">
-            <svg class="w-7 h-7" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
 
+
+
+
+
+
+        <button id="menu-btn" class="text-white focus:outline-none lg:hidden sm:ml-2">
+          <svg class="w-7 h-7" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
+    </div>
     </div>
 
     <!-- Menú móvil -->
-    <div id="mobile-menu" class="bg-black/95 hidden absolute top-20 left-0 w-full sm:hidden px-4 pb-4">
+    <div id="mobile-menu" class="bg-black/95 hidden absolute top-20 left-0 w-full px-4 pb-4 flex flex-col gap-2">
       <a href="#top" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Inicio</a>
       <a href="#Quienes-Somos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">¿Quiénes somos?</a>
       <a href="#Servicios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Servicios</a>
       <a href="#Eventos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Eventos</a>
+      <a href="#Zonas" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Ubicación</a>
       <a href="#Beneficios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Por qué elegirnos</a>
       <a href="#Cotizar" class="block py-2 text-lg text-blue-500 font-semibold">Cotización</a>
+
+      <!-- Redes sociales en móvil dentro del menú -->
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.facebook.com/prevencionbordon1?locale=es_LA" target="_blank">
+          <img src="./src/img/Facebook.webp" alt="Facebook" class="w-6 h-6">
+        </a>
+        <a href="https://www.instagram.com/prevencionbordon1/" target="_blank">
+          <img src="./src/img/instagram.webp" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://wa.me/+54 9 2325 59-8086" target="_blank">
+          <img src="./src/img/whatsapp.webp" alt="WhatsApp" class="w-6 h-6">
+        </a>
+      </div>
     </div>
   </nav>
+
 
   <link rel="preload" as="image" href="./src/img/pREVENCIONpPUERTA.webp">
 
@@ -105,7 +153,8 @@
   </picture>
   <!-- Sección con texto encima del fondo -->
   <section class="flex flex-col justify-center h-auto">
-    <div id="Inicio" class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 bg-opacity-80 text-white text-start">
+    <div id="Inicio" class="bg-black p-10 w-full -skew-y-6 lg:skew-y-0 bg-opacity-80 bg-black/70 
+ text-white text-start">
 
       <!-- Contenedor principal -->
       <div
@@ -113,13 +162,13 @@
 
         <!-- Texto -->
         <div class="flex flex-col gap-6">
-          <h1 class="text-3xl  md:text-4xl lg:text-5xl font-bold">
-            Seguridad y prevención profesional para tu evento.
+          <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Seguridad profesional <br> para fiestas y eventos
           </h1>
-          <h2 id="Quienes" class="text-gray-400 text-lg font-bold">
-            Seguridady prevención para todo tipo de eventos, con personal certificado y compromiso total con tu
-            seguridad.
-          </h2>
+          <p id="Quienes" class="text-lg md:text-xl text-gray-200 mb-8">
+            Personal certificado, prevención activa y compromiso total con tu tranquilidad.
+          </p>
+
           <a id="Quienes-Somos"
             href="https://wa.me/+5492325598086?text=Hola%20quiero%20hacer%20una%20cotizacion%20para%20un%20evento"
             class="bg-green-600 text-sm lg:text-lg hover:bg-green-700 text-white text-md px-6 py-3 rounded-3xl inline-flex items-center gap-3 font-bold w-max">
@@ -154,8 +203,8 @@
       </p>
 
       <!-- Texto adicional oculto -->
-      <div id="texto-largo" class="hidden transition-all duration-500">
-        <ul class="list-disc  list-inside text-lg leading-snug mb-6 space-y-2">
+      <div id="texto-largo" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <ul class="list-disc list-inside text-lg leading-snug mb-6 space-y-2">
           <li>Seguridad y prevención profesional con un <strong>equipo altamente capacitado</strong>.</li>
           <li>Certificación en RCP y uso de DEA para una <strong>respuesta inmediata ante emergencias</strong>.</li>
           <li>Personal habilitado según la <strong>ley 26.370</strong>, cumpliendo con todas las normativas vigentes.
@@ -163,8 +212,8 @@
           <li>Compromiso total con el orden, la prevención y la tranquilidad de todos los presentes.</li>
         </ul>
         <p class="uppercase text-md leading-tight mb-4">
-          Nuestra misión es proteger tu evento, para que vos y tus invitados disfruten con total confianza. Tu seguridad
-          y tranquilidad son nuestra máxima prioridad.
+          Nuestra misión es proteger tu evento, para que vos y tus invitados disfruten con total confianza.
+          Tu seguridad y tranquilidad son nuestra máxima prioridad.
         </p>
       </div>
 
@@ -326,7 +375,7 @@
           class="flex gap-4 text-focus-in border-2 lg:flex-col border-black items-center bg-black p-2 py-5 rounded-3xl">
           <img src="./src/img/CorazonBlanco.webp" alt="Respuesta inmediata" width="160" height="160"
             class="w-20 h-20 lg:w-40 lg:h-40 border-2 rounded-full" loading="lazy">
-          <p id="Cotizar" class="font-bold text-white lg:text-center lg:text-lg">
+          <p class="font-bold text-white lg:text-center lg:text-lg">
             Respuesta inmediata<br>
             Certificación en RCP y DEA para emergencias.
           </p>
@@ -338,46 +387,41 @@
 
   <section
     class="bg-black text-white p-10 py-20 flex flex-col lg:flex-row lg:px-60 lg:py-20 mx-auto w-full transform -skew-y-6 lg:skew-y-0">
-    <div class="skew-y-6 lg:skew-y-0 text-focus-in">
-      <h2 class="text-3xl font-bold mb-6 text-center">Zonas que Cubrimos</h2>
 
-      <p class="text-center mb-6 text-white/80">Escribinos y consulta tu localidad.</p>
+    <!-- Columna izquierda: Mapa -->
+    <div class="skew-y-6 lg:skew-y-0 text-focus-in w-full lg:w-3/4">
+      <h2 id="Zonas" class="text-3xl  font-bold mb-6 text-center">Zonas que Cubrimos</h2>
+      <p class="text-center text-lg mb-6 text-white/80">Escribinos y consulta tu localidad.</p>
 
       <!-- Contenedor del mapa -->
-      <div id="map" class="lg:w-100 w-auto h-96 rounded-xl shadow-lg"></div>
+      <div id="map" class="w-full h-96 rounded-xl shadow-lg"></div>
     </div>
-    <div class=" skew-y-6 lg:skew-y-0 flex flex-col gap-6 justify-center items-center">
 
-      <!-- Card 1 -->
-      <div class="flex flex-row items-center justify-center p-6 text-center flex flex-col  ">
-
-
+    <!-- Columna derecha: Tarjetas -->
+    <div class="skew-y-6 lg:skew-y-0 flex flex-col justify-end items-center w-full lg:w-1/4">
+      <!-- Card 2 -->
+      <div class="flex flex-col items-center justify-center p-6 text-center">
         <div
-          class="w-30 h-30 border-4 flex flex-col  items-center justify-center border-white text-center text-white p-10 rounded-full">
-          <span id="experience" class="font-extrabold text-4xl  font-extrabold ">
-            +0
-          </span>
-          <p>Años</p>
-        </div>
-        <p class="text-xl lg:text-2xl  text-white  ">
-          Protegiendo eventos con profesionalismo y compromiso absoluto
-        </p>
-        </p>
-      </div>
+          class="w-40 h-40 border-4 flex flex-col items-center justify-center border-white text-center text-white p-10 rounded-full">
 
-      <div class="flex text-focus-in flex-col border-2 border-black items-center p-5 rounded-3xl text-center">
-        <p class="text-xl lg:text-2xl  text-white gap-4 flex items-center justify-center flex-col">
-          <span id="events"
-            class="font-extrabold text-4xl  font-extrabold w-30 h-30 border-4 border-white text-center text-white flex items-center justify-center rounded-full">0</span>
-          Eventos realizados
-        </p>
+          <span id="events" class="font-extrabold text-5xl">+0</span>
+          <p>Eventos realizados</p>
+        </div>
+
+      </div>
+      <!-- Card 1 -->
+      <div class="flex flex-col items-center justify-center p-6 text-center">
+        <div
+          class="w-40 h-40 border-4 flex flex-col items-center justify-center border-white text-center text-white p-20 rounded-full">
+          <p class="min-w-max">Personal con</p>
+          <span id="experience" class="font-extrabold text-5xl">+0</span>
+          <p>Años de experiencia</p>
+        </div>
 
       </div>
 
 
     </div>
-
-
   </section>
 
   <a href="https://wa.me/+54 9 2325 59-8086?text=Hola%20quiero%20hacer%20una%20cotizacion para un evento"
@@ -388,7 +432,7 @@
     <span class="sr-only">Escribinos por WhatsApp</span>
   </a>
   <!-- Formulario WhatsApp -->
-  <section id="contacto" class="contacto-diagonal mt-[-25px] lg:px-60 min-w-full py-20 bg-main h-full   w-full  px-4">
+  <section id="Cotizar" class="contacto-diagonal mt-[-25px] lg:px-60 min-w-full py-20 bg-main h-full   w-full  px-4">
 
     <div class="text-focus-in contenido-contacto">
       <h2 class="text-3xl font-bold text-center text-white mb-8">Solicitá tu Cotización</h2>
@@ -484,7 +528,8 @@
         <a href="#Servicios" class="hover:text-main text-sm font-semibold">Servicios</a>
         <a href="#Eventos" class="hover:text-main text-sm font-semibold">Eventos</a>
         <a href="#Beneficios" class="hover:text-main text-sm font-semibold">Por qué elegirnos</a>
-        <a href="#Cotizar" class="hover:text-main text-sm font-semibold">Cotización</a>
+        <a href="#Zonas" class="hover:text-main text-sm font-semibold">Ubicación</a>
+
 
       </nav>
 
@@ -525,7 +570,9 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-
+    /* -----------------------------
+     * 1. Animación de aparición (IntersectionObserver)
+     * ----------------------------- */
     const elementos = document.querySelectorAll(".text-focus-in");
 
     const observer = new IntersectionObserver(
@@ -533,17 +580,61 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
-            // Si querés que solo ocurra una vez:
-            observer.unobserve(entry.target);
+            observer.unobserve(entry.target); // solo una vez
           }
         });
       },
-      {
-        threshold: 0.5, // Se activa cuando 50% del elemento es visible
-      }
+      { threshold: 0.5 } // cuando 50% visible
     );
 
     elementos.forEach((el) => observer.observe(el));
+
+    /* -----------------------------
+     * 2. Menú móvil
+     * ----------------------------- */
+    const btnMenu = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btnMenu.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    /* -----------------------------
+     * 3. Scroll suave
+     * ----------------------------- */
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        document
+          .querySelector(anchor.getAttribute("href"))
+          .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    /* -----------------------------
+     * 4. Botón "Ver más"
+     * ----------------------------- */
+    const btn = document.getElementById("ver-mas-btn");
+    const texto = document.getElementById("texto-largo");
+
+    let expandido = false;
+
+    btn.addEventListener("click", () => {
+      if (!expandido) {
+        texto.classList.remove("max-h-0");
+        texto.classList.add("max-h-[1000px]"); // suficiente para cubrir el texto
+        btn.innerText = "Ver menos";
+      } else {
+        texto.classList.remove("max-h-[1000px]");
+        texto.classList.add("max-h-0");
+        btn.innerText = "Ver más";
+      }
+      expandido = !expandido;
+    });
+
+    /* -----------------------------
+     * 5. Enviar WhatsApp
+     * ----------------------------- */
     function enviarWhatsApp() {
       const nombre = document.getElementById("nombre").value;
       const evento = document.getElementById("evento").value;
@@ -553,30 +644,10 @@
       );
       window.open(`https://wa.me/5492325598086?text=${mensaje}`, "_blank");
     }
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
 
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", (e) => {
-        e.preventDefault();
-        document
-          .querySelector(anchor.getAttribute("href"))
-          .scrollIntoView({ behavior: "smooth" });
-      });
-    });
-    const btn2 = document.getElementById("ver-mas-btn");
-    const textoLargo = document.getElementById("texto-largo");
-
-    btn2.addEventListener("click", () => {
-      textoLargo.classList.toggle("hidden");
-      btn2.textContent = textoLargo.classList.contains("hidden")
-        ? "Ver más"
-        : "Ver menos";
-    });
-    // Swiper que permite click
+    /* -----------------------------
+     * 6. Swipers
+     * ----------------------------- */
     const swiperEventos = new Swiper(".swiper-eventos", {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -586,55 +657,48 @@
       pagination: { el: ".swiper-pagination", clickable: true },
       breakpoints: {
         1024: { slidesPerView: 2, spaceBetween: 30 },
-        1280: { slidesPerView: 2, spaceBetween: 40 }
+        1280: { slidesPerView: 2, spaceBetween: 40 },
       },
       autoplay: { delay: 2000 },
-      navigation: { nextEl: ".swiper-button-next-eventos", prevEl: ".swiper-button-prev-eventos" },
+      navigation: {
+        nextEl: ".swiper-button-next-eventos",
+        prevEl: ".swiper-button-prev-eventos",
+      },
     });
 
     const swiperServicios = new Swiper(".swiper-servicios", {
       slidesPerView: 1,
-
-      slideToClickedSlide: false,
       allowTouchMove: false,
       breakpoints: {
         1024: { slidesPerView: 3 },
-        1280: { slidesPerView: 3 }
+        1280: { slidesPerView: 3 },
       },
       autoplay: { delay: 3000, disableOnInteraction: false },
-      navigation: { nextEl: ".swiper-button-next-servicios", prevEl: ".swiper-button-prev-servicios" },
+      navigation: {
+        nextEl: ".swiper-button-next-servicios",
+        prevEl: ".swiper-button-prev-servicios",
+      },
     });
-    // Inicializamos el mapa
-    const map = L.map('map').setView([-34.2044120404261, -59.892346263222066], 9); // Centramos en Buenos Aires
 
-    // Capa de OpenStreetMap
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      subdomains: 'abcd',
-      maxZoom: 19
+    /* -----------------------------
+     * 7. Mapa con Leaflet
+     * ----------------------------- */
+    const map = L.map("map").setView(
+      [-34.2044120404261, -59.892346263222066],
+      9
+    );
+
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      subdomains: "abcd",
+      maxZoom: 19,
     }).addTo(map);
 
-
-    // Icono personalizado con el logo de la empresa
     const logoIcon = L.icon({
-      html: `<div style="
-    background-color: #022257;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  ">
-    <img src="./src/img/IconoLobo.webp" style="width:30px; height:30px;">
-  </div>`,
-      iconUrl: './src/img/logo_correcto.webp', // ruta a tu logo
-      iconSize: [30, 50], // tamaño del logo [ancho, alto]
-      iconAnchor: [0, 30], // punto que apunta a la ubicación
-
-
+      iconUrl: "./src/img/logo_correcto.webp",
+      iconSize: [30, 50],
+      iconAnchor: [0, 30],
     });
 
-    // Localidades a marcar
     const zonas = [
       { nombre: "San Antonio de Areco", coords: [-34.2534488266816, -59.47240545103087] },
       { nombre: "San Andrés de Giles", coords: [-34.443178546607214, -59.446775706976254] },
@@ -645,16 +709,15 @@
       { nombre: "Pergamino", coords: [-33.88465939495402, -60.58448493479187] },
     ];
 
-    // Dibujamos círculos y agregamos el marcador con logo
-    zonas.forEach(zona => {
-      // Círculo de cobertura
-
-
-      // Marcador con logo
+    zonas.forEach((zona) => {
       L.marker(zona.coords, { icon: logoIcon })
         .addTo(map)
         .bindPopup(`<strong>${zona.nombre}</strong>`);
     });
+
+    /* -----------------------------
+     * 8. Contadores animados
+     * ----------------------------- */
     function countUp(element, to, duration = 2000) {
       const start = 0;
       const startTime = performance.now();
@@ -662,39 +725,37 @@
       function update(now) {
         const progress = Math.min((now - startTime) / duration, 1);
         const value = Math.floor(progress * (to - start) + start);
-        element.textContent = '+' + value;
+        element.textContent = "+" + value;
         if (progress < 1) requestAnimationFrame(update);
       }
 
       requestAnimationFrame(update);
     }
 
-    // Seleccionamos las cards con número
     const numberCards = [
       { el: document.getElementById("experience"), to: 20 },
       { el: document.getElementById("events"), to: 100 },
       { el: document.getElementById("clients"), to: 50 },
     ];
 
-    // IntersectionObserver para animar solo cuando entren en pantalla
     const observerNumbers = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const card = numberCards.find(c => c.el === entry.target);
+            const card = numberCards.find((c) => c.el === entry.target);
             if (card) {
               countUp(card.el, card.to, 2000);
-              observer.unobserve(card.el); // solo una vez
+              observer.unobserve(card.el);
             }
           }
         });
       },
-      { threshold: 0.5 } // se activa cuando 50% visible
+      { threshold: 0.5 }
     );
 
-    // Observamos cada número
-    numberCards.forEach(card => observerNumbers.observe(card.el));
+    numberCards.forEach((card) => observerNumbers.observe(card.el));
   </script>
+
   <script type="module" src="./src/main.js"></script>
 </body>
 
