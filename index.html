@@ -116,7 +116,10 @@
     </div>
 
     <!-- Menú móvil -->
-    <div id="mobile-menu" class="bg-black/95 hidden absolute top-20 left-0 w-full px-4 pb-4 flex flex-col gap-2">
+    <div id="mobile-menu"
+      class="bg-black/95 overflow-hidden max-h-0 absolute lg:hidden top-20 left-0 w-full px-4 pb-2 flex flex-col  transition-all duration-500">
+
+
       <a href="#top" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Inicio</a>
       <a href="#Quienes-Somos" class="block py-2 text-lg text-gray-300 hover:text-blue-500">¿Quiénes somos?</a>
       <a href="#Servicios" class="block py-2 text-lg text-gray-300 hover:text-blue-500">Servicios</a>
@@ -596,8 +599,15 @@
     const menu = document.getElementById("mobile-menu");
 
     btnMenu.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+      if (menu.classList.contains("max-h-0")) {
+        menu.classList.remove("max-h-0");
+        menu.classList.add("max-h-screen"); // suficiente altura para todo el menú
+      } else {
+        menu.classList.remove("max-h-screen");
+        menu.classList.add("max-h-0");
+      }
     });
+
 
     /* -----------------------------
      * 3. Scroll suave
