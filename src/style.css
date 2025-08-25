@@ -32,6 +32,16 @@ body {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(30, 64, 175, 0.5) transparent;
 }
+html {
+	scroll-behavior: smooth;
+}
+body {
+	scroll-padding-top: 80px; /* si tenés navbar fijo */
+}
+
+section {
+	scroll-snap-align: start;
+}
 
 .swiper-pagination-bullet {
 	background-color: #c0c0c0; /* equivale a bg-gray-400 */
@@ -109,4 +119,22 @@ body {
 .swiper-pagination-bullet-active {
 	background: #ffffffff; /* color azul Tailwind */
 	opacity: 1;
+}
+a:hover[href*="wa.me"] {
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.15);
+	}
+}
+a[href*="wa.me"]:hover {
+	box-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.4);
+	transform: scale(1.2);
+	transition: all 0.3s ease;
 }
