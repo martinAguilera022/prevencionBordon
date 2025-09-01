@@ -138,3 +138,17 @@ a[href*="wa.me"]:hover {
 	transform: scale(1.2);
 	transition: all 0.3s ease;
 }
+.parallax-text {
+	transform: translateY(0);
+	transition: transform 0.2s linear;
+}
+
+.parallax-img {
+	transform: translateY(0);
+	transition: transform 0.2s linear;
+}
+.parallax-card {
+	transition: transform 0.2s ease;
+	transform-style: preserve-3d;
+	perspective: 1000px; /* Mejora la sensación de profundidad */
+}
