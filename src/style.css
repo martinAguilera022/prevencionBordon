@@ -12,7 +12,6 @@ body {
 	font-family: "Monda", sans-serif;
 	font-weight: 200;
 	font-style: normal;
-	
 }
 
 /* Scroll general del body */
@@ -65,7 +64,7 @@ section {
 /* Clip-path por defecto (para móvil y tablets) */
 .contacto-diagonal {
 	position: relative;
-	clip-path: polygon(0 9%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* Para pantallas lg y mayores, eliminamos el clip-path */
