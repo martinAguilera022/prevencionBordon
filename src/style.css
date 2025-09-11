@@ -12,6 +12,7 @@ body {
 	font-family: "Monda", sans-serif;
 	font-weight: 200;
 	font-style: normal;
+	
 }
 
 /* Scroll general del body */
@@ -160,8 +161,24 @@ a[href*="wa.me"]:hover {
 	transform-style: preserve-3d;
 	perspective: 1000px; /* Mejora la sensación de profundidad */
 }
+.parallax-left,
+.parallax-right {
+	opacity: 0;
+	transform: translateX(100px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.parallax-left {
+	transform: translateX(-100px);
+}
+
+/* Estado animado (cuando entra en viewport) */
+.parallax-show {
+	opacity: 1;
+	transform: translateX(0);
+}
 .monserrat {
 	font-family: "Monserrat", sans-serif;
-	
+
 	font-style: normal;
 }
