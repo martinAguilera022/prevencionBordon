@@ -13,11 +13,7 @@ body {
 	font-weight: 200;
 	font-style: normal;
 }
-.monserrat {
-	font-family: "Monserrat", sans-serif;
-	font-weight: 900;
-	font-style: normal;
-}
+
 /* Scroll general del body */
 body::-webkit-scrollbar {
 	width: 12px; /* ancho de la barra */
@@ -163,4 +159,9 @@ a[href*="wa.me"]:hover {
 	transition: transform 0.2s ease;
 	transform-style: preserve-3d;
 	perspective: 1000px; /* Mejora la sensación de profundidad */
+}
+.monserrat {
+	font-family: "Monserrat", sans-serif;
+	
+	font-style: normal;
 }
