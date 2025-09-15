@@ -170,7 +170,7 @@
         class="skew-y-6 lg:skew-y-0 text-focus-in flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 lg:py-40 lg:px-60 gap-6 pt-28 pb-20 px-6 sm:px-1">
 
         <!-- Texto -->
-        <div class="parallax-text flex flex-col gap-4">
+        <div class=" flex flex-col gap-4 parallax-left">
           <h1 class="monserrat  text-4xl md:text-6xl font-extrabold leading-tight mb-6">
             SEGURIDAD PROFESIONAL PARA EVENTOS
           </h1>
@@ -186,7 +186,7 @@
         </div>
 
         <!-- Imagen -->
-        <div class="parallax-img hidden lg:flex justify-center items-center">
+        <div class="parallax-right hidden lg:flex justify-center items-center">
           <img id="Logo" src="./src/img/IconoLobo.webp" alt="Logo Prevencion Bordon" class="w-128 object-contain" />
         </div>
 
@@ -237,9 +237,9 @@
   </section>
 
 
-  <section id="Servicios" class="py-20 p-10  py-20 lg:px-60 lg:py-20 mx-auto    bg-gray-100 p-10 -skew-y-6 lg:skew-y-0">
+  <section id="Servicios" class="py-20 flex justify-center py-20 xl:px-60 lg:py-20    bg-gray-100 p-10 -skew-y-6 lg:skew-y-0">
 
-    <div class="container mx-auto px-4 transform skew-y-6 overflow-hidden  lg:skew-y-0">
+    <div class="container     transform skew-y-6 overflow-hidden  lg:skew-y-0">
       <h2 class="text-3xl parallax-left font-bold text-center mb-8 text-focus-in">Nuestros Servicios</h2>
       <p class="text-center parallax-right text-gray-700 mb-12">
         En <strong>Prevención Bordon</strong> ofrecemos soluciones de seguridad para eventos privados y
@@ -247,10 +247,11 @@
         tranquilidad en cada ocasión.
       </p>
 
-      <div class="grid md:grid-cols-6 md:grid-rows-2 gap-8">
+      <div class="grid lg:grid-cols-6 lg:grid-rows-2  md:grid-cols-2 gap-8">
         <!-- Seguridad para Eventos -->
         <!-- Sección de Servicios de Seguridad -->
-        <div class="bg-white p-6  parallax-left rounded-lg shadow-md flex flex-col md:col-span-2 items-start text-focus-in">
+        <div
+          class="bg-white p-6  parallax-left rounded-lg shadow-md flex flex-col md:col-span-2 items-start text-focus-in">
           <!-- Icono de acceso -->
           <img src="./src/img/shield_171556.webp" alt="Control de Accesos" class="w-12 h-12">
           <h3 class="text-xl font-semibold mb-2 border-b-2 border-main">Control de Accesos</h3>
@@ -276,7 +277,7 @@
         </div>
 
         <div
-          class="bg-white parallax-right  p-6 rounded-lg shadow-md flex flex-col gap-2 md:col-span-2 md:col-start-2 flex items-start text-focus-in">
+          class="bg-white parallax-right  p-6 rounded-lg shadow-md flex flex-col gap-2 md:col-span-2 lg:col-start-2 flex items-start text-focus-in">
           <!-- Icono de asistencia -->
           <img src="./src/img/hand_2618552.webp" alt="Asistencia en Emergencias" class="w-14 h-14">
           <h3 class="text-xl font-semibold mb-2 border-b-2 border-main">Asistencia en Emergencia</h3>
@@ -473,7 +474,7 @@
     <span class="sr-only">Escribinos por WhatsApp</span>
   </a>
   <!-- Formulario WhatsApp -->
-  <section id="Cotizar" class="contacto-diagonal mt-[-25px] lg:px-60 min-w-full py-20 bg-main h-full   w-full  px-4">
+  <section id="Cotizar" class="contacto-diagonal -mt-20 lg:px-60 min-w-full py-20 bg-main h-full   w-full  px-4">
 
     <div class="text-focus-in contenido-contacto">
       <h2 class="text-3xl font-bold text-center text-white mb-8">Solicitá tu Cotización</h2>
@@ -631,19 +632,6 @@
 
     elementos.forEach((el) => observer.observe(el));
 
-    window.addEventListener("scroll", () => {
-      let scrollY = window.scrollY;
-
-      // Texto se mueve hacia abajo
-      document.querySelector(".parallax-text").style.transform =
-        `translateX(${scrollY * -0.2}px)`;
-
-      // Imagen se mueve hacia arriba
-      document.querySelector(".parallax-img").style.transform =
-        `translateX(${scrollY * 0.2}px)`;
-
-
-    });
 
     document.addEventListener("DOMContentLoaded", () => {
       const elements = document.querySelectorAll(".parallax-left, .parallax-right");
